@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int arr[10] = {10,20,30,40,50,60,70,80};
+    int arr_size = 8;
+
+    cout<<"Initial Array: ";
+
+    for (int i = 0; i<arr_size;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"Array size: "<<arr_size<<endl;
+
+    arr_size--;
+
+    cout<<"Updated array after deletion from the end: ";
+
+    for (int i = 0; i<arr_size;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"Array size: "<<arr_size<<endl;
+
+    for (int i = 0; i<arr_size;i++)
+    {
+        arr[i] = arr[i+1];
+    }
+
+    arr_size--;
+
+    cout<<"Updated array after deletion from the begining: ";
+
+    for (int i = 0; i<arr_size;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"Array size: "<<arr_size<<endl;
+
+    int pos = 2;
+
+    for (int i = pos;i<arr_size;i++)
+    {
+        arr[i] = arr[i+1];
+    }
+
+    arr_size--;
+
+    cout<<"Updated array after deletion from a specific index: ";
+
+    for (int i = 0; i<arr_size;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"Array size: "<<arr_size<<endl;
+
+
+
+    return 0;
+}

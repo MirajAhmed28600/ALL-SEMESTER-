@@ -1,0 +1,70 @@
+1. Insertion - 1D array
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int arr[10] = {10,20,30,40,50};
+    int arr_size = 5;
+
+    cout<<"Initial array:";
+
+    for (int i = 0; i<arr_size;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"Array size = "<<arr_size<<endl;
+
+    arr[arr_size] = 60;
+
+    arr_size++;
+
+    cout<<"Insertion at the end of the array :";
+    for (int i = 0; i<arr_size;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"Array size = "<<arr_size<<endl;
+
+    for (int i = arr_size;i > 0;i--)
+    {
+        arr[i] = arr[i-1];
+    }
+    arr_size++;
+
+    arr[0] = 70;
+
+    cout<<"Insertion at the beginning of the array :";
+    for (int i = 0; i<arr_size;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+
+    cout<<endl;
+    cout<<"Array size = "<<arr_size<<endl;
+
+    int value = 80;
+    int pos = 3;
+
+    for (int i = arr_size;i > pos;i--)
+    {
+        arr[i] = arr[i-1];
+    }
+
+    arr_size++;
+    arr[pos] = value;
+
+    cout<<"Insertion at a specific position of the array :";
+    for (int i = 0; i<arr_size;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+
+    cout<<endl;
+    cout<<"Array size = "<<arr_size<<endl;
+
+    return 0;
+}
